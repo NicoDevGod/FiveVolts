@@ -1,6 +1,10 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+
+  
 
 function Contact(){
+
+
     return (
         <h1>Contact</h1>
     )
