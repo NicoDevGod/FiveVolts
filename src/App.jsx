@@ -11,6 +11,7 @@ import {
   Outlet,
   Link,
 } from "react-router-dom";
+import Catalog from './pages/Catalog';
 
 
 const Dashboard = () => {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
       {
         path:"/contact",
         element:<Contact />
+    
+      },      
+      {
+        path:"/catalog",
+        element:<Catalog />
     
       },
     ],
