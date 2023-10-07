@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Navbar from './components/Navbar';
+import Catalog from './pages/Catalog';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -11,10 +12,12 @@ import {
   Outlet,
   Link,
 } from "react-router-dom";
-import Catalog from './pages/Catalog';
+
 
 
 const Dashboard = () => {
+
+
   return (
     <div>
       <Navbar />
@@ -25,6 +28,8 @@ const Dashboard = () => {
 
 const router = createBrowserRouter([
   {
+
+
     path:"/",
     element:<Dashboard />,
     children: [
@@ -38,8 +43,9 @@ const router = createBrowserRouter([
     
       },      
       {
+        
         path:"/catalog",
-        element:<Catalog />
+        element:<Catalog  />
     
       },
     ],
@@ -55,6 +61,7 @@ const router = createBrowserRouter([
 function App() {
   
 
+  
   return (
     <div className='App'>
       <RouterProvider router={router}/>
