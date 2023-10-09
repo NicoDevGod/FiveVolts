@@ -45,7 +45,7 @@ function Navbar(){
     </>
     return(
         <nav>
-            <div className="h-10vh flex justify-between z-50 text-black lg:py-5 px-20 py-4 drop-shadow-xl bg-slate-50">
+            <div className="h-10vh flex justify-between z-50 text-black lg:py-5 px-20 py-4 drop-shadow-xl bg-white">
                 <div className="flex items-center flex-1 ">
                     <span className="text-3xl font-bold">Logo</span>
                 </div>

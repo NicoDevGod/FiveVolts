@@ -13,7 +13,7 @@ function Card({propertie}) {
         after:absolute after:bottom-[70px] after:left-0 after:w-[25px] after:h-[25px] after:bg-transparent after:rounded-full after:shadow-after
          bg-cover`} src={url} />
   
-            
+      
         
 
         {/* Container */}
@@ -34,9 +34,18 @@ function Card({propertie}) {
             <li className='mb-2 font-medium'>
             {propertie.attributes.propertyType}
             </li>
-            <li className='mb-2 font-medium'>
-            {propertie.attributes.propertyParking} parking/s.
+            <li className='mb-2 font-medium '>
+            <div className=' flex justify-between'>
+              <div>
+                {propertie.attributes.propertyParking} parking/s.
+              </div>
+              <div>
+                {propertie.attributes.propertyDate}
+              </div>
+            </div>
+                    
             </li>
+
         </ul>
         </div>
     </div>
