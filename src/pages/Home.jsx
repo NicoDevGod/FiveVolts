@@ -26,9 +26,9 @@ function Home(){
             </section>
             <br/>
             <div className="px-2">
-            <Carousel2/>
+                <Carousel2/>
             </div>
-            
+
         </>
     )
 }

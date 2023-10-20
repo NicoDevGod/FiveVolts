@@ -1,8 +1,15 @@
 import React from "react";
+import { Button, Space } from "antd";
+import { CgWebsite } from "react-icons/cg";
 import { Link } from "react-router-dom";
-import {FaTimes} from "react-icons/fa"
+import {FaTimes, FaHome, FaBookOpen} from "react-icons/fa"
 import {CiMenuFries} from "react-icons/ci"
 import { useState } from "react";
+import { useAuthContext } from "../context/AuthContext";
+import { removeToken } from "../helpers";
+import {MdContactSupport} from "react-icons/md";
+import {GrCatalog} from "react-icons/gr";
+
 
 function Enlace({path, nombre}){
 
@@ -30,6 +37,14 @@ function Enlace2({path, nombre, handleClick}){
 }
 
 function Navbar(){
+    const { user, setUser } = useAuthContext();
+    const handleLogout = () => {
+        removeToken();
+        setUser(undefined);
+        navigate("/signin", { replace: true });
+      };
+
+
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
     
@@ -51,11 +66,37 @@ function Navbar(){
                 </div>
                 <div className="lg:flex md:flex sm:flex lg:flex-1 items-center justify-end font-normal hidden">
                     <div className="flex-10">
-                        <ul className="flex gap-8 mr-16 text-[18px]">
-                            <Enlace path="" nombre="Home"/>
-                            <Enlace path="catalog" nombre="Catalog"/>
-                            <Enlace path="contact" nombre="Contact"/>
-                            <Enlace path="contact" nombre="Log in"/>
+                        <ul className="flex gap-8 items-center">
+                            <Enlace path="" nombre={<FaHome size={25}/>}/>
+                            <Enlace path="catalog" nombre={<FaBookOpen size={25}/>}/>
+                            <Enlace path="contact" nombre={<MdContactSupport size={25}/>}/>
+                            {user ? (
+                                <>
+                                    <Button className="auth_button_login" href="/profile" type="link">
+                                    {user.username}
+                                    </Button>
+                                    <Button
+                                    className="auth_button_signUp"
+                                    
+                                    onClick={handleLogout}
+                                    >
+                                    Logout
+                                    </Button>
+                                </>
+                                ) : (
+                                <>
+                                    <Button className="auth_button_login" href="/signin" type="link">
+                                    Login
+                                    </Button>
+                                    <Button
+                                    className="auth_button_signUp"
+                                    href="/signup"
+                                    type="primary"
+                                    >
+                                    SignUp
+                                    </Button>
+                                </>
+                            )}
                         </ul>
                     </div>
                 </div>

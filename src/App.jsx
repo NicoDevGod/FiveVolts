@@ -5,6 +5,9 @@ import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Navbar from './components/Navbar';
 import Catalog from './pages/Catalog';
+import SignUp from './pages/SignUp/SignUp';
+import SignIn from './pages/SignIn/SignIn';
+import Profile from './components/Profile/Profile';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -46,6 +49,24 @@ const router = createBrowserRouter([
         
         path:"/catalog",
         element:<Catalog  />
+    
+      },
+      {
+        
+        path:"/signup",
+        element:<SignUp  />
+    
+      },
+      {
+        
+        path:"/signin",
+        element:<SignIn  />
+    
+      },     
+      {
+        
+        path:"/profile",
+        element:<Profile  />
     
       },
     ],
