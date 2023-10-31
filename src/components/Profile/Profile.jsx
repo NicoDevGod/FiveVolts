@@ -54,49 +54,6 @@ const Profile = () => {
         onFinish={handleProfileUpdate}
       >
         <Row gutter={[16, 16]}>
-          <Col md={8} lg={8} sm={24} xs={24}>
-            <Form.Item
-              label="Username"
-              name="username"
-              rules={[
-                {
-                  required: true,
-                  message: "Username is required!",
-                  type: "string",
-                },
-              ]}
-            >
-              <Input placeholder="Username" />
-            </Form.Item>
-          </Col>
-          <Col md={8} lg={8} sm={24} xs={24}>
-            <Form.Item
-              label="Email"
-              name="email"
-              rules={[
-                {
-                  required: true,
-                  message: "Email is required!",
-                  type: "email",
-                },
-              ]}
-            >
-              <Input placeholder="Email" />
-            </Form.Item>
-          </Col>
-          <Col md={8} lg={8} sm={24} xs={24}>
-            <Form.Item
-              label="Avatar Url"
-              name="avatar_url"
-              rules={[
-                {
-                  type: "url",
-                },
-              ]}
-            >
-              <Input placeholder="Avatar Url" />
-            </Form.Item>
-          </Col>
           <Col span={24}>
             <Form.Item
               label="About"
@@ -112,32 +69,7 @@ const Profile = () => {
               <Input.TextArea placeholder="About" rows={6} />
             </Form.Item>
           </Col>
-          <Col md={8} lg={8} sm={24} xs={24}>
-            <Form.Item
-              label="Twitter Username"
-              name="twitter_username"
-              rules={[
-                {
-                  type: "string",
-                },
-              ]}
-            >
-              <Input placeholder="Twitter Username" />
-            </Form.Item>
-          </Col>
-          <Col md={8} lg={8} sm={24} xs={24}>
-            <Form.Item
-              label="LinkedIn Username"
-              name="linkedin_username"
-              rules={[
-                {
-                  type: "string",
-                },
-              ]}
-            >
-              <Input placeholder="LinkedIn Username" />
-            </Form.Item>
-          </Col>
+
           <Col md={8} lg={8} sm={24} xs={24}>
             <Form.Item
               label="Github Username"

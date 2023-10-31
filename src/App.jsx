@@ -8,6 +8,7 @@ import Catalog from './pages/Catalog';
 import SignUp from './pages/SignUp/SignUp';
 import SignIn from './pages/SignIn/SignIn';
 import Profile from './components/Profile/Profile';
+import Footer from './components/Footer/Footer';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -24,7 +25,8 @@ const Dashboard = () => {
   return (
     <div>
       <div className='sticky top-0 z-50'><Navbar /></div>
-      <Outlet />
+      <div className=' pb-36'><Outlet /></div>
+      <div ><Footer/></div>
     </div>
   );
 };
