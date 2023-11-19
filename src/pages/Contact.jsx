@@ -1,12 +1,16 @@
 import React, {useEffect, useState} from "react";
+import Collection from './collection'
 
-  
 
 function Contact(){
 
 
     return (
-        <h1>Contact</h1>
+        <>
+            <Collection/>
+        
+        
+        </>
     )
 }
 

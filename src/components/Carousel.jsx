@@ -1,8 +1,8 @@
 import React from 'react'
 import { Carousel } from "@material-tailwind/react";
-import Card from '../components/Card'
+import Card from '../components/Cards/Card'
 import { useState, useEffect } from "react"
-import HorizontalCard from './HorizontalCard';
+import HorizontalCard from './Cards/HorizontalCard';
 
 function Carousel2() {
 
