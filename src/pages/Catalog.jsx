@@ -1,9 +1,9 @@
-import React from 'react'
+
 import Card from '../components/Cards/Card'
 import { useState, useEffect } from "react"
-import  useFetch from "../hooks/useFetch";
 
 function Catalog() {
+ 
 /*
   let {loading, data, error} = useFetch('http://localhost:1337/api/properties?populate=*')
   if(loading) return <p>Loading...</p>
@@ -21,15 +21,29 @@ function Catalog() {
       .then((response) => response.json())
       .then((data) => setData(data));
   },[]);
+  
+/*
+    // eslint-disable-next-line no-unused-vars
+    const [filters, setFilters] = useState({
+      category: 'all',
+      minPrice: 0
+    })
+    
+    const filterProducts = (data) => {
+      return data.filters(data => {
+        return (
 
-
+        )
+      })
+    }
+  */
   //console.log(data?.data[2].attributes.propertyImage.data[0].attributes.url)
   
   return (
     
     <>
       
-      <div className="flex justify-center p-10">
+      <div key="x" className="flex justify-center p-10">
 
 
 

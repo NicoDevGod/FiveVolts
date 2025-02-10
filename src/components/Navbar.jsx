@@ -64,11 +64,11 @@ function Navbar(){
             <div className="h-10vh flex justify-between z-50 text-black lg:py-5 px-20 py-4 drop-shadow-xl bg-white">
             {user ? (
                                 <>
-                                    <div class="flex items-center space-x-4">
-                                        <img class="w-10 h-10 rounded-full" src={user.avatar_url} alt=""/>
-                                        <div class="font-medium dark:text-white">
+                                    <div className="flex items-center space-x-4">
+                                        <img className="w-10 h-10 rounded-full" src={user.avatar_url} alt=""/>
+                                        <div className="font-medium dark:text-white">
                                             <div>{user.username}</div>
-                                            <div class="text-sm text-gray-500 dark:text-gray-400">{user.email}</div>
+                                            <div className="text-sm text-gray-500 dark:text-gray-400">{user.email}</div>
                                         </div>
                                     </div>
                                 </>
@@ -102,7 +102,7 @@ function Navbar(){
                                     ) : (
                                     <>
                                         <Link to={"/signin"} className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
-                                            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                                 Login
                                             </span>
                                         </Link>

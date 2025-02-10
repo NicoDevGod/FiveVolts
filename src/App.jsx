@@ -4,18 +4,20 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Navbar from './components/Navbar';
-import Catalog from './pages/Catalog';
+//import Catalog from './pages/Catalog';
 import SignUp from './pages/SignUp/SignUp';
 import SignIn from './pages/SignIn/SignIn';
 import Profile from './components/Profile/Profile';
 import Footer from './components/Footer/Footer';
+import Filter from './components/Filter/Filter';
+
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
   Outlet,
-  Link,
 } from "react-router-dom";
+import { useState } from 'react';
+
 
 
 
@@ -24,9 +26,10 @@ const Dashboard = () => {
 
   return (
     <div>
+      
       <div className='sticky top-0 z-50'><Navbar /></div>
       <div className=' pb-36'><Outlet /></div>
-      <div ><Footer/></div>
+      <div className=''><Footer/></div>
     </div>
   );
 };
@@ -50,7 +53,7 @@ const router = createBrowserRouter([
       {
         
         path:"/catalog",
-        element:<Catalog  />
+        element:<Filter  />
     
       },
       {
@@ -82,8 +85,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  
-
   
   return (
     <div className='App'>

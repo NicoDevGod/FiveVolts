@@ -96,9 +96,22 @@ const Profile = () => {
               <Input placeholder="Website Url" />
             </Form.Item>
           </Col>
+          <Col md={8} lg={8} sm={24} xs={24}>
+            <Form.Item
+              label="Image Url"
+              name="avatar_url"
+              rules={[
+                {
+                  type: "url",
+                },
+              ]}
+            >
+              <Input placeholder="Image URL" />
+            </Form.Item>
+          </Col>
         </Row>
         <Button
-          className="profile_save_btn"
+          className="profile_save_btn text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 "
           htmlType="submit"
           type="primary"
           size="large"

@@ -24,15 +24,24 @@ function Card({propertie}) {
         after:absolute after:bottom-0 after:-right-[25px] after:w-[25px] after:h-[25px] after:bg-transparent after:rounded-full after:shadow-after2">
             <a href='#' className=" relative bg-white py-3 px-4 m-4 block rounded-lg font-medium">${propertie.attributes.propertyPrice}</a>
         </span>
-        <ul className=" list-disc text-white pt-8 px-8">
+        <ul className=" list-disc text-white pt-8 px-8 ">
+            <li className='mb-2 font-medium'>
+            {propertie.attributes.propertyTitle}
+            </li>
             <li className='mb-2 font-medium'>
             {propertie.attributes.propertyRooms} Rooms, {propertie.attributes.propertyBathrooms} Bathrooms.
             </li>
-            <li className='mb-2 font-medium'>
-            {propertie.attributes.propertyArea} metros.
-            </li>
-            <li className='mb-2 font-medium'>
-            {propertie.attributes.propertyType}
+            <li className='mb-2 font-medium '>
+            <div className=' flex justify-between'>
+              <div>
+                {propertie.attributes.propertyArea} Mtrs.
+              </div>
+              <div>
+                {propertie.attributes.propertyType}
+              </div>
+              
+            </div>
+
             </li>
             <li className='mb-2 font-medium '>
             <div className=' flex justify-between'>
@@ -42,10 +51,11 @@ function Card({propertie}) {
               <div>
                 {propertie.attributes.propertyDate}
               </div>
+              
             </div>
-                    
-            </li>
 
+            </li>
+            
         </ul>
         </div>
     </div>
